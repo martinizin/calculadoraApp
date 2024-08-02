@@ -12,6 +12,7 @@ import kotlin.math.tan
 class MainActivity : AppCompatActivity() {
     private lateinit var display: TextView
     private var input = StringBuilder()
+    private var expression = StringBuilder()
     private var value1 = Double.NaN
     private var value2 = 0.0
     private var currentAction: Char = ' '
@@ -33,7 +34,8 @@ class MainActivity : AppCompatActivity() {
     fun onNumberClick(view: View) {
         val button = view as Button
         input.append(button.text.toString())
-        display.text = input.toString()
+        expression.append(button.text.toString())
+        display.text = expression.toString()
     }
 
     fun onOperatorClick(view: View) {
@@ -43,13 +45,18 @@ class MainActivity : AppCompatActivity() {
                 value2 = input.toString().toDouble()
                 input.clear()
                 calculate()
-                display.text = value1.toString()
                 currentAction = button.text[0]
+                expression.append(currentAction)
+                display.text = expression.toString()
             }
         } else {
-            value1 = input.toString().toDouble()
-            currentAction = button.text[0]
-            input.clear()
+            if (input.isNotEmpty()) {
+                value1 = input.toString().toDouble()
+                input.clear()
+                currentAction = button.text[0]
+                expression.append(currentAction)
+                display.text = expression.toString()
+            }
         }
     }
 
@@ -60,7 +67,10 @@ class MainActivity : AppCompatActivity() {
                 input.clear()
                 calculate()
                 currentAction = EQU
-                display.text = value1.toString()
+                expression.append("=$value1")
+                display.text = expression.toString()
+                expression.clear()
+                expression.append(value1)
             }
         }
     }
@@ -76,6 +86,7 @@ class MainActivity : AppCompatActivity() {
 
     fun onClearClick(view: View) {
         input.clear()
+        expression.clear()
         value1 = Double.NaN
         value2 = Double.NaN
         display.text = ""
@@ -86,6 +97,7 @@ class MainActivity : AppCompatActivity() {
         val function = button.text.toString()
         val inputValue = input.toString().toDouble()
         input.clear()
+        expression.clear()
         val result = when (function) {
             "sin" -> sin(inputValue)
             "cos" -> cos(inputValue)
