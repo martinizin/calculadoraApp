@@ -29,7 +29,13 @@ Martin Jimenez @martinizin
 ![image](https://github.com/user-attachments/assets/22312a0f-1ad5-40f9-b671-00c499bbfc7b)
 
 ### FUNCIÓN SENO
+![image](https://github.com/user-attachments/assets/3afc2e0c-f2ae-486d-9f45-773b65259e98)
+
 ### FUNCIÓN COSENO
+![image](https://github.com/user-attachments/assets/ee4caeb9-3478-4fcd-a096-9e55e2e4aece)
+
 ### FUNCIÓN TANGENTE
+![image](https://github.com/user-attachments/assets/e1e98378-7d7d-4221-abe1-b3f8e1744833)
+
 
 
