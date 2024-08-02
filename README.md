@@ -12,3 +12,24 @@ Martin Jimenez @martinizin
 ![image](https://github.com/user-attachments/assets/0d29cfd9-46f4-4f15-8655-8abfbd333037)
 
 ### APP FUNCIONAL
+
+![image](https://github.com/user-attachments/assets/8d2b156a-4a5b-46b8-bb00-073cc49a3e11)
+
+### FUNCIÓN SUMA
+![image](https://github.com/user-attachments/assets/41797f1b-b2cb-4b08-a3d3-ff453a72f5c5)
+
+### FUNCIÓN RESTA
+![image](https://github.com/user-attachments/assets/c5424f19-d44e-48e1-b299-8f6a15e052d3)
+
+### FUNCIÓN MULTIPLICACIÓN
+
+![image](https://github.com/user-attachments/assets/8eacdc51-02b4-44bd-a592-a2fd0ad6b6fc)
+
+### FUNCIÓN DIVISIÓN
+![image](https://github.com/user-attachments/assets/22312a0f-1ad5-40f9-b671-00c499bbfc7b)
+
+### FUNCIÓN SENO
+### FUNCIÓN COSENO
+### FUNCIÓN TANGENTE
+
+
