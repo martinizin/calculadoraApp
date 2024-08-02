@@ -95,15 +95,26 @@ class MainActivity : AppCompatActivity() {
     fun onTrigFunctionClick(view: View) {
         val button = view as Button
         val function = button.text.toString()
-        val inputValue = input.toString().toDouble()
-        input.clear()
-        expression.clear()
-        val result = when (function) {
-            "sin" -> sin(inputValue)
-            "cos" -> cos(inputValue)
-            "tan" -> tan(inputValue)
-            else -> 0.0
+
+        // If there's no number input, show the function
+        if (input.isEmpty() && value1.isNaN()) {
+            expression.append(function).append("(")
+            display.text = expression.toString()
+            input.append(function).append("(")
+        } else {
+            val inputValue = if (input.isNotEmpty()) input.toString().toDouble() else value1
+            input.clear()
+            expression.append(function).append("(").append(inputValue).append(")")
+            val result = when (function) {
+                "sin" -> sin(inputValue)
+                "cos" -> cos(inputValue)
+                "tan" -> tan(inputValue)
+                else -> 0.0
+            }
+            display.text = "$expression = $result"
+            expression.clear()
+            expression.append(result)
+            value1 = result
         }
-        display.text = result.toString()
     }
 }
